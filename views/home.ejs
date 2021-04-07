@@ -1,0 +1,28 @@
+<%- include( 'layout-h', { title:'HOME' } ) %> 
+
+<link rel="stylesheet" href="stylesheets/form.css">
+<div id="back-form">
+    <div id="result"> Write your message below: </div>
+    <div id="form">
+        <div class="txt-input" id="to" onclick="remove(this)" >  
+            <div class="txt-label"> Your_mail_id@mail.com </div>
+            <div id="to-txt" class="txt" onblur="addIfNotEmpyt(this)"></div>
+        </div>
+        <!-- <div class="txt-input" id="from" onclick="remove(this)">
+            <div class="txt-label"> sender@mail.com </div>
+            <div id="from-txt" class="txt" onblur="addIfNotEmpyt(this)"></div>
+        </div> -->
+        <div class="txt-input" id="subject" onclick="remove(this)">
+            <div class="txt-label"> Subject </div>
+            <div id="subject-txt" class="txt" onblur="addIfNotEmpyt(this)"></div>
+        </div>
+        <div id="message" onclick="remove(this)">
+            <div class="txt-label"> message </div>
+            <div id="message-txt" class="txt" onblur="addIfNotEmpyt(this)"></div>
+        </div>
+        <div class="button" onclick="send()"> SEND </div>
+    </div>
+</div>
+
+<script src="javascripts/form.js"></script>
+<%- include( 'layout-f') %> 
